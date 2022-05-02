@@ -55,12 +55,14 @@ As a user:
 - [ ] You will be able to run action for every row like (add, edit, delete)
 
 
-## Future Inhancements
+## Future Inhancements if I have more time
 
 -  to pass custom render function to render data for every column.
 -  To pass custom sorter or comparer function for column sorting.
 -  add loading indecator when refetching data.
 -  Separate the logic of aggregation and sorting in custom hooks called useAggregateBy and useSortBy
+-  Enhance responsiveness
+-  Add some unit / E2E tests
 
 ## Available Scripts
 
