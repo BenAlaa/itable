@@ -34,7 +34,7 @@ export type TableInstance = {
     columns: Array<ColumnData>;
     aggBy: string;
     aggOptions: Array<Option>;
-    aggTotal: TableTotal;
+    aggTotal: number;
     handleAggChange: (aggByKey: string) => void;
     sortBy: SortData|null;
     handleSortChange: (sortBy: SortData) => void;

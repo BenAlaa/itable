@@ -53,6 +53,7 @@ function App() {
     handleSortChange,
   } = useTable(data, columns, "amount", moneyToNumber);
 
+
   return (
     <PageWrapper>
       <Header />
@@ -68,7 +69,7 @@ function App() {
           handleAggChange={handleAggChange}
           aggTotal={{
             label: "Total",
-            value: aggTotal.value,
+            value: aggTotal,
           }}
           sortBy={sortBy}
           handleSortChange={handleSortChange}

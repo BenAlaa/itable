@@ -18,6 +18,8 @@ const useTable = (
 	const [aggBy, setAggBy] = useState<string>('')
 	const [sortBy, setSortBy] = useState<SortData | null>(null)
     
+
+	//To auto calculate available options to previewd in dropdown options
 	const aggOptions: Array<Option> = useMemo(
 		() =>
 			columns
@@ -26,7 +28,8 @@ const useTable = (
 		[columns, aggSelector]
 	)
 
-	const aggTotal = useMemo(() => {
+	//to memoize the total sum of agg selector whenevery agg selector changed 
+	const aggTotal: number = useMemo(() => {
 		return tableData.reduce((prev, curr) => {
 			return (prev +=
 				typeof curr[aggSelector] === 'string'
@@ -35,6 +38,7 @@ const useTable = (
 		}, 0)
 	}, [tableData, aggFormatter, aggSelector])
 
+	//to recalculate and update table data and columns when agg selection changed
 	const handleAggChange = (aggByKey: string) => {
 		setAggBy(aggByKey)
 		if (aggByKey === '') {
@@ -71,6 +75,8 @@ const useTable = (
 		[aggFormatter, data]
 	)
 
+
+	//to recalculate and update table data and columns when sort by column or type changed
 	const handleSortChange = (sortData: SortData) => {
 		setSortBy(sortData)
 		sortDataByKey(tableData, sortData)
