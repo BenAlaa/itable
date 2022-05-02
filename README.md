@@ -59,7 +59,8 @@ As a user:
 
 -  to pass custom render function to render data for every column.
 -  To pass custom sorter or comparer function for column sorting.
--  add loading indecator when refetching data
+-  add loading indecator when refetching data.
+-  Separate the logic of aggregation and sorting in custom hooks called useAggregateBy and useSortBy
 
 ## Available Scripts
 
